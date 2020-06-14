@@ -18,7 +18,7 @@ It seems that LSTM or BiLSTM have its limit no matter how many deep layers or ne
 **Epoch = 30 using t-2,t-1,t to predict t+1 & t+2**
 
 | Model    | trainable parameters  | train RMSE | train RMSE | val RMSE | val RMSE | test RMSE | test RMSE |
-| :------------       |:----------:| :-----:| :-----:| :-----:|
+| :-------------------|:----------:| :-----:| :-----:| :-----:| :-----:| :-----:| :-----:|
 |                     |            |   t+1  |   t+2  |   t+1  |   t+2  |   t+1  |   t+2  |
 | LSTM1-3in2out_tanh  | 18,453,378 | 0.1716 | 0.2064 | 0.1054 | 0.1716 | 0.2064 | 0.1054 |
 | LSTM2-3in2out_tanh  | 1,187,586  | 0.1726 | 0.2080 | 0.1062 | 0.1716 | 0.2064 | 0.1054 |
