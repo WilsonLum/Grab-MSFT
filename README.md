@@ -19,7 +19,7 @@ results. It seems that LSTM or BiLSTM have its limit no matter how many deep lay
 | LSTM1-3in2out_relu  | 18,453,378 | 0.1679 | 0.2040 | 0.1047 |
 | LSTM2-3in2out_relu  | 1,187,586  | 0.1689 | 0.2055 | 0.1052 |
 | LSTM3-3in2out_relu  | 12,621,826 | 0.1702 | 0.2057 | 0.1050 |
-| ------------ |---------------| -----| -----| -----|
+|                     |            |        |        |        |
 | Bi-LSTM1-3in2out_tanh  | 53,786,114 | 0.1615 | 0.1950 | 0.1181 |
 | Bi-LSTM2-3in2out_tanh  | 3,423,746  | 0.1601 | 0.1948 | 0.1156 |
 | Bi-LSTM1-3in2out_relu  | 53,786,114 | 0.1605 | 0.1946 | 0.1154 |
@@ -35,7 +35,7 @@ results. It seems that LSTM or BiLSTM have its limit no matter how many deep lay
 | LSTM1-6in2out_relu  | 18,453,378 | 0.1679 | 0.2040 | 0.1047 |
 | LSTM2-6in2out_relu  | 1,187,586  | 0.1689 | 0.2055 | 0.1052 |
 | LSTM3-6in2out_relu  | 12,621,826 | 0.1702 | 0.2057 | 0.1050 |
-
+|                     |            |        |        |        |
 | Bi-LSTM1-6in2out_tanh  | 53,786,114 | 0.1615 | 0.1950 | 0.1181 |
 | Bi-LSTM2-6in2out_tanh  | 3,423,746  | 0.1601 | 0.1948 | 0.1156 |
 | Bi-LSTM1-6in2out_relu  | 53,786,114 | 0.1605 | 0.1946 | 0.1154 |
