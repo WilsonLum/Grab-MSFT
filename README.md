@@ -1,9 +1,7 @@
-# Grab-MSFT
-## Grab Challenge - Traffic Management
+# Grab Challenge - Traffic Management
 
 ## Which areas have high / low traffic demand?
-- As reference to the data and visualisation above the using max count and highest demand = 1,  latlong(-5.353088,90.818481)
-- is the area having the highest traffic
+- As reference to the data and visualisation below the using max count and highest demand = 1,  latlong(-5.353088,90.818481) is the area having the highest traffic
 - Lowest demand area is latlong(-5.24322509765625, 90.8184814453125)
 
 ![High Demand Count Clustering](/diagram/geohash__High_demand_Count_clustering.png)
