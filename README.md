@@ -1,14 +1,21 @@
 # Grab-MSFT
 ## Grab Challenge - Traffic Management
+
+## Which areas have high / low traffic demand?
+- As reference to the data and visualisation above the using max count and highest demand = 1,  latlong(-5.353088,90.818481)
+- is the area having the highest traffic
+- Lowest demand area is latlong(-5.24322509765625, 90.8184814453125)
+
+![High Demand Count Clustering](/diagram/geohash__High_demand_Count_clustering.png)
+
+![High Demand COunt Clustering](/diagram/geohash_High_demand_clustering.png)
+
+## Forecast the travel demand for next 15min / 1hour (RMSE)
 I'll using minimum approach to feature engineering since I'll be only considering LSTM & CNN neural networks which are capable of learning features automatically. I have used few scenario as in using different t-x & t+y , eg: t-3,t-2,t-1 & t to predit t+1 & t+2. Below table is the summary of the best result I could produced.
 
 Due to time factor, I have not be available to relook into the dataset to see if there is other features that I can extract to improve the results. I believe we can add in more features to improve the results further. 
 
 It seems that LSTM or BiLSTM have its limit no matter how many deep layers or neurons I added and the best is using lesser layers and neurons as in the model LSTM2-6in2out_relu with trainable parameters of 1,187,586.
-
-![High Demand COunt Clustering](/diagram/geohash__High_demand_Count_clustering.png)
-
-## Forecast the travel demand for next 15min / 1hour (RMSE)
 
 **Epoch = 30 using t-2,t-1,t to predict t+1 & t+2**
 
