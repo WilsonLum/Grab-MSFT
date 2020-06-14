@@ -6,6 +6,7 @@ Due to time factor, I have not be available to relook into the dataset to see if
 
 It seems that LSTM or BiLSTM have its limit no matter how many deep layers or neurons I added and the best is using lesser layers and neurons as in the model LSTM2-6in2out_relu with trainable parameters of 1,187,586.
 
+![High Demand COunt Clustering](/diagram/geohash__High_demand_Count_clustering.png)
 
 ## Forecast the travel demand for next 15min / 1hour (RMSE)
 
