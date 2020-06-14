@@ -1,10 +1,10 @@
 # Grab-MSFT
 ## Grab Challenge - Traffic Management
-I'll using minimum approach to feature engineering since I'll be only considering LSTM & CNN neural networks which are capable of learning features automatically. I have used few scenario as in using different t-x & t+y , eg: t-3,t-2,t-1 & t to predit t+1 & t+2. Below table
-is the summary of the best result I could produced.
+I'll using minimum approach to feature engineering since I'll be only considering LSTM & CNN neural networks which are capable of learning features automatically. I have used few scenario as in using different t-x & t+y , eg: t-3,t-2,t-1 & t to predit t+1 & t+2. Below table is the summary of the best result I could produced.
 
-Due to time factor, I have not be available to relook into the dataset to see if there is other features that I can extract to improve the
-results. It seems that LSTM or BiLSTM have its limit no matter how many deep layers or neurons I added and the best is using lesser layers and neurons as in the model LSTM2-6in2out_relu with trainable parameters of 1,187,586.
+Due to time factor, I have not be available to relook into the dataset to see if there is other features that I can extract to improve the results. I believe we can add in more features to improve the results further. 
+
+It seems that LSTM or BiLSTM have its limit no matter how many deep layers or neurons I added and the best is using lesser layers and neurons as in the model LSTM2-6in2out_relu with trainable parameters of 1,187,586.
 
 
 ## Forecast the travel demand for next 15min / 1hour (RMSE)
