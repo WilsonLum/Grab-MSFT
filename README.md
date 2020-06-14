@@ -17,7 +17,7 @@ It seems that LSTM or BiLSTM have its limit no matter how many deep layers or ne
 
 **Epoch = 30 using t-2,t-1,t to predict t+1 & t+2**
 
-| Model    | trainable parameters  |   train RMSE   |||    val RMSE    |||    test RMSE   |||
+| Model    | trainable parameters  |   train RMSE   ||    val RMSE    ||    test RMSE   ||
 | :-------------------|:----------:| :-----:| :-----:| :-----:| :-----:| :-----:| :-----:|
 |                     |            |   t+1  |   t+2  |   t+1  |   t+2  |   t+1  |   t+2  |
 | LSTM1-3in2out_tanh  | 18,453,378 | 0.1716 | 0.2064 | 0.1054 | 0.1716 | 0.2064 | 0.1054 |
@@ -34,17 +34,17 @@ It seems that LSTM or BiLSTM have its limit no matter how many deep layers or ne
 
 **Epoch = 30 using t-5,t-4,t-3,t-2,t-1,t to predict t+1 & t+2**
 
-| Model | trainable parameters  | train RMSE | val RMSE | test RMSE |
-| :------------ |:---------------:| :-----:| :-----:| :-----:|
-| LSTM1-6in2out_tanh  | 18,453,378 | 0.1707 | 0.2062 | 0.1053 |
-| LSTM2-6in2out_tanh  | 1,187,586  | 0.1692 | 0.2047 | 0.1033 |
-| LSTM3-6in2out_tanh  | 12,621,826 | 0.1689 | 0.2046 | 0.1050 |
-| LSTM1-6in2out_relu  | 18,453,378 | 0.1715 | 0.2069 | 0.1058 |
-| LSTM2-6in2out_relu  | 1,187,586  | 0.1644 | 0.1990 | 0.1032 |
-| LSTM3-6in2out_relu  | 12,621,826 | 0.1669 | 0.2028 | 0.1034 |
-|                     |            |        |        |        |
-| Bi-LSTM1-6in2out_tanh  | 53,786,114 | 0.1618 | 0.1954 | 0.1126 |
-| Bi-LSTM2-6in2out_tanh  | 3,423,746  | 0.1617 | 0.1954 | 0.1118 |
-| Bi-LSTM1-6in2out_relu  | 53,786,114 | 0.1619 | 0.1954 | 0.1135 |
-| Bi-LSTM2-6in2out_relu  | 3,423,746  | 0.1616 | 0.1957 | 0.1095 |
+| Model    | trainable parameters  |   train RMSE   ||    val RMSE    ||    test RMSE   ||
+| :-------------------|:----------:| :-----:| :-----:| :-----:| :-----:| :-----:| :-----:|
+| LSTM1-6in2out_tanh  | 18,453,378 | 0.1707 | 0.2062 | 0.1053 | 0.1707 | 0.2062 | 0.1053 |
+| LSTM2-6in2out_tanh  | 1,187,586  | 0.1692 | 0.2047 | 0.1033 | 0.1707 | 0.2062 | 0.1053 |
+| LSTM3-6in2out_tanh  | 12,621,826 | 0.1689 | 0.2046 | 0.1050 | 0.1707 | 0.2062 | 0.1053 |
+| LSTM1-6in2out_relu  | 18,453,378 | 0.1715 | 0.2069 | 0.1058 | 0.1707 | 0.2062 | 0.1053 |
+| LSTM2-6in2out_relu  | 1,187,586  | 0.1644 | 0.1990 | 0.1032 | 0.1707 | 0.2062 | 0.1053 |
+| LSTM3-6in2out_relu  | 12,621,826 | 0.1669 | 0.2028 | 0.1034 | 0.1707 | 0.2062 | 0.1053 |
+|                     |            |        |        |        |        |        |        |
+| Bi-LSTM1-6in2out_tanh  | 53,786,114 | 0.1618 | 0.1954 | 0.1126 | 0.1707 | 0.2062 | 0.1053 |
+| Bi-LSTM2-6in2out_tanh  | 3,423,746  | 0.1617 | 0.1954 | 0.1118 | 0.1707 | 0.2062 | 0.1053 |
+| Bi-LSTM1-6in2out_relu  | 53,786,114 | 0.1619 | 0.1954 | 0.1135 | 0.1707 | 0.2062 | 0.1053 |
+| Bi-LSTM2-6in2out_relu  | 3,423,746  | 0.1616 | 0.1957 | 0.1095 | 0.1707 | 0.2062 | 0.1053 |
 
