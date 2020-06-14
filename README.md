@@ -29,15 +29,15 @@ results. It seems that LSTM or BiLSTM have its limit no matter how many deep lay
 
 | Model | trainable parameters  | train RMSE | val RMSE | test RMSE |
 | :------------ |:---------------:| :-----:| :-----:| :-----:|
-| LSTM1-6in2out_tanh  | 18,453,378 | 0.1716 | 0.2064 | 0.1054 |
-| LSTM2-6in2out_tanh  | 1,187,586  | 0.1726 | 0.2080 | 0.1062 |
-| LSTM3-6in2out_tanh  | 12,621,826 | 0.1687 | 0.2040 | 0.1036 |
-| LSTM1-6in2out_relu  | 18,453,378 | 0.1679 | 0.2040 | 0.1047 |
-| LSTM2-6in2out_relu  | 1,187,586  | 0.1689 | 0.2055 | 0.1052 |
-| LSTM3-6in2out_relu  | 12,621,826 | 0.1702 | 0.2057 | 0.1050 |
+| LSTM1-6in2out_tanh  | 18,453,378 | 0.1707 | 0.2062 | 0.1053 |
+| LSTM2-6in2out_tanh  | 1,187,586  | 0.1692 | 0.2047 | 0.1033 |
+| LSTM3-6in2out_tanh  | 12,621,826 | 0.1689 | 0.2046 | 0.1050 |
+| LSTM1-6in2out_relu  | 18,453,378 | 0.1715 | 0.2069 | 0.1058 |
+| LSTM2-6in2out_relu  | 1,187,586  | 0.1644 | 0.1990 | 0.1032 |
+| LSTM3-6in2out_relu  | 12,621,826 | 0.1669 | 0.2028 | 0.1034 |
 |                     |            |        |        |        |
-| Bi-LSTM1-6in2out_tanh  | 53,786,114 | 0.1615 | 0.1950 | 0.1181 |
-| Bi-LSTM2-6in2out_tanh  | 3,423,746  | 0.1601 | 0.1948 | 0.1156 |
-| Bi-LSTM1-6in2out_relu  | 53,786,114 | 0.1605 | 0.1946 | 0.1154 |
-| Bi-LSTM2-6in2out_relu  | 3,423,746  | 0.1601 | 0.1945 | 0.1134 |
+| Bi-LSTM1-6in2out_tanh  | 53,786,114 | 0.1618 | 0.1954 | 0.1126 |
+| Bi-LSTM2-6in2out_tanh  | 3,423,746  | 0.1617 | 0.1954 | 0.1118 |
+| Bi-LSTM1-6in2out_relu  | 53,786,114 | 0.1619 | 0.1954 | 0.1135 |
+| Bi-LSTM2-6in2out_relu  | 3,423,746  | 0.1616 | 0.1957 | 0.1095 |
 
