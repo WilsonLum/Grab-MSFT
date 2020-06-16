@@ -9,42 +9,36 @@
 ![High Demand COunt Clustering](/diagram/geohash_High_demand_clustering.png)
 
 ## Forecast the travel demand for next 15min / 1hour (RMSE)
-I'll using minimum approach to feature engineering since I'll be only considering LSTM & CNN neural networks which are capable of learning features automatically. I have used few scenario as in using different t-x & t+y , eg: t-3,t-2,t-1 & t to predit t+1 & t+2. Below table is the summary of the best result I could produced.
+I'll using minimum approach to feature engineering since I'll be only considering LSTM & Bi-LSTM neural networks which are capable of learning features automatically. I have used few scenario as in using different t-x & t+y , eg: t-3,t-2,t-1 & t to predit t+1 & t+2. Below table is the summary of the best result I could produced.
 
 Due to time factor, I have not be available to relook into the dataset to see if there is other features that I can extract to improve the results. I believe we can add in more features to improve the results further. 
 
-It seems that LSTM or BiLSTM have its limit no matter how many deep layers or neurons I added and the best is using lesser layers and neurons as in the model LSTM2-6in2out_relu with trainable parameters of 1,187,586.
+Some observation as follow:
+ - It seems that LSTM produced better results than BiLSTM 
+ - Deep layers or more neurons may not increase the accuracy after LSTM3.
+ - Using further previous state of inout increase the accuracy as comparing using 6 previous state (6in2out) and 3 previous state (3in2out)
+ - Best result is LSTM3-6in2out wtih 12,621,82 trainable parameters
 
-**Epoch = 30 using t-2,t-1,t to predict t+1 & t+2**
+**Epoch = 20 using t-2,t-1,t to predict t+1 & t+2**
 
-| Model    | trainable parameters  |   train RMSE   ||    val RMSE    ||    test RMSE   ||
-| :-------------------|:----------:| :-----:| :-----:| :-----:| :-----:| :-----:| :-----:|
-|                     |            |   t+1  |   t+2  |   t+1  |   t+2  |   t+1  |   t+2  |
-| LSTM1-3in2out_tanh  | 18,453,378 | 0.1716 | 0.2064 | 0.1054 | 0.1716 | 0.2064 | 0.1054 |
-| LSTM2-3in2out_tanh  | 1,187,586  | 0.1726 | 0.2080 | 0.1062 | 0.1716 | 0.2064 | 0.1054 |
-| LSTM3-3in2out_tanh  | 12,621,826 | 0.1687 | 0.2040 | 0.1036 | 0.1716 | 0.2064 | 0.1054 |
-| LSTM1-3in2out_relu  | 18,453,378 | 0.1679 | 0.2040 | 0.1047 | 0.1716 | 0.2064 | 0.1054 |
-| LSTM2-3in2out_relu  | 1,187,586  | 0.1689 | 0.2055 | 0.1052 | 0.1716 | 0.2064 | 0.1054 |
-| LSTM3-3in2out_relu  | 12,621,826 | 0.1702 | 0.2057 | 0.1050 | 0.1716 | 0.2064 | 0.1054 |
-|                     |            |        |        |        |
-| Bi-LSTM1-3in2out_tanh  | 53,786,114 | 0.1615 | 0.1950 | 0.1181 | 0.1716 | 0.2064 | 0.1054 |
-| Bi-LSTM2-3in2out_tanh  | 3,423,746  | 0.1601 | 0.1948 | 0.1156 | 0.1716 | 0.2064 | 0.1054 |
-| Bi-LSTM1-3in2out_relu  | 53,786,114 | 0.1605 | 0.1946 | 0.1154 | 0.1716 | 0.2064 | 0.1054 |
-| Bi-LSTM2-3in2out_relu  | 3,423,746  | 0.1601 | 0.1945 | 0.1134 | 0.1716 | 0.2064 | 0.1054 |
+| Model   |trainable parameters |   train RMSE   ||    val RMSE    ||    test RMSE   ||
+| :-------------  -|:----------:| :-----:| :-----:| :-----:| :-----:| :-----:| :-----:|
+|                  |            |   t+1  |   t+2  |   t+1  |   t+2  |   t+1  |   t+2  |
+| LSTM1-3in2out    | 18,453,378 | 0.0693 | 0.0670 | 0.0112 | 0.0185 | 0.0381 | 0.0427 |
+| LSTM2-3in2out    | 1,187,586  | 0.0669 | 0.0618 | 0.0104 | 0.0029 | 0.0369 | 0.0432 |
+| LSTM3-3in2out    | 12,621,826 | 0.0469 | 0.0394 | 0.0117 | 0.0080 | 0.0322 | 0.0499 |
+|                  |            |        |        |        |
+| Bi-LSTM1-3in2out | 53,786,114 | 0.1092 | 0.1134 | 0.0070 | 0.0036 | 0.0551 | 0.0627 |
+| Bi-LSTM2-3in2out | 3,423,746  | 0.1228 | 0.1234 | 0.0198 | 0.0238 | 0.0602 | 0.0660 |
 
-**Epoch = 30 using t-5,t-4,t-3,t-2,t-1,t to predict t+1 & t+2**
+**Epoch = 20 using t-5,t-4,t-3,t-2,t-1,t to predict t+1 & t+2**
 
-| Model    | trainable parameters  |   train RMSE   ||    val RMSE    ||    test RMSE   ||
-| :-------------------|:----------:| :-----:| :-----:| :-----:| :-----:| :-----:| :-----:|
-| LSTM1-6in2out_tanh  | 18,453,378 | 0.1707 | 0.2062 | 0.1053 | 0.1707 | 0.2062 | 0.1053 |
-| LSTM2-6in2out_tanh  | 1,187,586  | 0.1692 | 0.2047 | 0.1033 | 0.1707 | 0.2062 | 0.1053 |
-| LSTM3-6in2out_tanh  | 12,621,826 | 0.1689 | 0.2046 | 0.1050 | 0.1707 | 0.2062 | 0.1053 |
-| LSTM1-6in2out_relu  | 18,453,378 | 0.1715 | 0.2069 | 0.1058 | 0.1707 | 0.2062 | 0.1053 |
-| LSTM2-6in2out_relu  | 1,187,586  | 0.1644 | 0.1990 | 0.1032 | 0.1707 | 0.2062 | 0.1053 |
-| LSTM3-6in2out_relu  | 12,621,826 | 0.1669 | 0.2028 | 0.1034 | 0.1707 | 0.2062 | 0.1053 |
-|                     |            |        |        |        |        |        |        |
-| Bi-LSTM1-6in2out_tanh  | 53,786,114 | 0.1618 | 0.1954 | 0.1126 | 0.1707 | 0.2062 | 0.1053 |
-| Bi-LSTM2-6in2out_tanh  | 3,423,746  | 0.1617 | 0.1954 | 0.1118 | 0.1707 | 0.2062 | 0.1053 |
-| Bi-LSTM1-6in2out_relu  | 53,786,114 | 0.1619 | 0.1954 | 0.1135 | 0.1707 | 0.2062 | 0.1053 |
-| Bi-LSTM2-6in2out_relu  | 3,423,746  | 0.1616 | 0.1957 | 0.1095 | 0.1707 | 0.2062 | 0.1053 |
+| Model | trainable parameters  |   train RMSE   ||    val RMSE    ||    test RMSE   ||
+| :----------------|:----------:| :-----:| :-----:| :-----:| :-----:| :-----:| :-----:|
+| LSTM1-6in2out    | 18,453,378 | 0.0591 | 0.0626 | 0.0099 | 0.0071 | 0.0249 | 0.0440 |
+| LSTM2-6in2out    | 1,187,586  | 0.0664 | 0.0671 | 0.0197 | 0.0184 | 0.0430 | 0.0468 |
+| LSTM3-6in2out    | 12,621,826 | 0.0215 | 0.0226 | 0.0074 | 0.0071 | 0.0532 | 0.0099 |
+|                  |            |        |        |        |        |        |        |
+| Bi-LSTM1-6in2out | 53,786,114 | 0.1317 | 0.1348 | 0.0854 | 0.0952 | 0.0957 | 0.1188 |
+| Bi-LSTM2-6in2out | 3,423,746  | 0.1195 | 0.1197 | 0.0488 | 0.0547 | 0.0811 | 0.1016 |
 
